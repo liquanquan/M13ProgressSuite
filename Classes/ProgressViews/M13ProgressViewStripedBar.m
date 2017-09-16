@@ -280,7 +280,8 @@
     _backgroundLayer.frame = self.bounds;
     _progressSuperLayer.frame = self.bounds;
     _progressMaskLayer.frame = self.bounds;
-    [self setAnimateStripes:YES];
+    // 关闭动画,临时解决会概率性闪的问题
+//    [self setAnimateStripes:YES];
     [self calculateMask];
     [self drawStripes];
 }
